@@ -5,6 +5,7 @@ a motion server for raspberry pi
 ~~~bash
 docker run \
     -d \
+    -e TZ="America/Los_Angeles"
     --name motion-server \
     -p 9001:8081 \
     -v /mnt/data:/var/lib/motion \

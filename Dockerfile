@@ -17,4 +17,6 @@ RUN git clone https://github.com/Motion-Project/motion.git && \
     rm -rf /motion
 
 COPY motion.conf /motion.conf
-ENTRYPOINT ["motion", "-c", "/motion.conf"]
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
