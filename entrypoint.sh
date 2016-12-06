@@ -10,4 +10,4 @@ TZPATH="/usr/share/zoneinfo/$TZ"
 ln -fs $TZPATH /etc/localtime
 dpkg-reconfigure -f noninteractive tzdata
 
-motion -c /motion.conf
+motion -c /etc/motion/motion.conf
